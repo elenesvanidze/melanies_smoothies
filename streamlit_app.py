@@ -9,7 +9,7 @@ st.write("Choose the fruits you want in your custom Smoothie!"
 
 # Get the current credentials
 cnx = st.connection("snowflake")
-sesstion = cnx.session()
+session = cnx.session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col("fruit_name"))
 
 name_on_order = st.text_input("Name on Smoothie: ")
